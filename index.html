@@ -15,32 +15,33 @@
             background-color: #FFE5B4;
             margin: 0;
             transition: background-color 0.3s;
-         	*/ text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
         }
 
         #countdown {
             font-size: 2em;
             color: #313639;
-				 font-family: 'Bradley Hand', cursive;
+            font-family: 'Bradley Hand', cursive;
+            text-align: center;
         }
 
         .big-text {
             font-size: 3em;
             animation: fadeOut 5s forwards;
+            text-align: center;
         }
 
         .letter {
             display: none;
-            width: 50%;
-            height: 50%;
+            width: 90%;
+            max-width: 600px;
             background: rgba(255, 255, 255, 0.7); /* Semi-transparent background for glassy effect */
             border: 2px solid rgba(255, 255, 255, 0.25); /* Semi-transparent border */
             border-radius: 15px;
             backdrop-filter: blur(10px); /* Background blur for glassy effect */
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             padding: 20px;
-            font-family: 'Great Vibes', cursive;
-            font-size: 120%;
+            font-family: 'Bradley Hand', cursive;
+            font-size: 1.2em;
             text-align: center;
             color: #313639;
             position: absolute;
@@ -63,7 +64,7 @@
 </head>
 <body>
     <div id="countdown">Loading countdown...</div>
-    <div class="letter" id="birthdayMessage">Happy Birthday, my love! Here's to countless more moments of joy, love, and endless adventures together. You bring so much light into my life, and I'm incredibly grateful to celebrate today with you.  Here's to making your day as magical as you make every moment of my life. I love you tirelessly, Peach..🎉✨</div>
+    <div class="letter" id="birthdayMessage">Happy Birthday, my love! Here's to countless more moments of joy, love, and endless adventures together. You bring so much light into my life, and I'm incredibly grateful to celebrate today with you. Here's to making your day as magical as you make every moment of my life.<br>I love you tirelessly, Peach 🤎🎉✨</div>
 
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.3.3/dist/confetti.browser.min.js"></script>
     <script>
@@ -103,12 +104,12 @@
         }
 
         function changeBackground() {
-            document.body.style.backgroundColor = "#FFE5B4"; // Amber background for a festive vibe
+            document.body.style.backgroundColor = "#FFE5B4"; // Revert to initial amber background color
             document.getElementById('countdown').textContent = '';
             document.getElementById('birthdayMessage').style.display = 'block';
         }
 
-        const countdownDate = new Date("June 21, 2024 00:00:00").getTime();
+        const countdownDate = new Date("June 12, 2024 06:37:00").getTime();
         startCountdown(countdownDate);
     </script>
 </body>
